@@ -1,0 +1,1257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+
+<title>Privacy Policy | Arrow Puzzle : TJ games</title>
+
+<style>
+:root {
+    --bg: #0b1120;
+    --card: #131d30;
+    --card2: #19253a;
+    --text: #edf2ff;
+    --muted: #a7b4cc;
+    --accent: #64b5ff;
+    --gold: #ffd36b;
+    --border: #29364d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(circle at top, #172743 0%, #0b1120 45%);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 1px solid #ffffff30;
+    background: #19253a;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px #0005;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    background: #e54848;
+    transform: scale(1.08);
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    padding: 38px 20px;
+    background:
+        radial-gradient(circle at top, #263d65, transparent 70%),
+        linear-gradient(145deg, #17243a, #0d1423);
+    border: 1px solid #354966;
+    border-radius: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 35px #0004;
+}
+
+.devotional {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.game-logo {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #8bc8ff,
+        #ffffff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 5px;
+}
+
+.brand-name {
+    color: #70baff;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.subtitle {
+    display: inline-block;
+    color: var(--gold);
+    background: #ffffff10;
+    border: 1px solid #ffffff20;
+    padding: 7px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.date {
+    color: #aabbd3;
+    font-size: 13px;
+    margin-top: 18px;
+    line-height: 1.8;
+}
+
+/* INTRO */
+
+.notice {
+    background: #172b43;
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 17px;
+    margin-bottom: 22px;
+    color: #d9e9ff;
+    font-size: 14px;
+}
+
+/* BUTTONS */
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.btn {
+    border: 1px solid var(--border);
+    background: var(--card2);
+    color: var(--text);
+    padding: 11px 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #263a59;
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+/* POLICY SECTIONS */
+
+.section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.section:hover {
+    border-color: #425979;
+}
+
+.section-header {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    padding: 18px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-header:hover {
+    background: var(--card2);
+}
+
+.arrow {
+    color: var(--accent);
+    font-size: 20px;
+    transition: transform 0.25s;
+    flex-shrink: 0;
+}
+
+.section.open .arrow {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+}
+
+.section.open .section-content {
+    grid-template-rows: 1fr;
+}
+
+.section-inner {
+    overflow: hidden;
+    padding: 0 18px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.section.open .section-inner {
+    padding-bottom: 20px;
+}
+
+.section-content h3 {
+    color: var(--text);
+    font-size: 16px;
+    margin: 18px 0 8px;
+}
+
+.section-content p {
+    margin-bottom: 12px;
+}
+
+.section-content ul {
+    padding-left: 22px;
+    margin: 10px 0 15px;
+}
+
+.section-content li {
+    margin-bottom: 7px;
+}
+
+.section-content a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.section-content a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 38px 15px 25px;
+    margin-top: 25px;
+    color: var(--muted);
+}
+
+.footer-line {
+    width: 70px;
+    height: 3px;
+    margin: 0 auto 25px;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        #64b5ff,
+        #ffd36b
+    );
+}
+
+.footer-game {
+    color: #edf2ff;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.footer-tagline {
+    font-size: 13px;
+    margin-bottom: 23px;
+    color: #9aacc7;
+}
+
+.footer-credit {
+    font-size: 14px;
+    color: #b9c7dc;
+}
+
+.heart {
+    color: #ff657a;
+    font-size: 17px;
+}
+
+.footer-developer {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin: 8px 0 15px;
+    background: linear-gradient(
+        90deg,
+        #ffd36b,
+        #ffffff,
+        #70baff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #71839d;
+}
+
+.footer-ram {
+    color: var(--gold);
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin-top: 22px;
+}
+
+/* BACK TO TOP */
+
+.top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ffffff30;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #07111f;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 5px 20px #0005;
+    z-index: 100;
+}
+
+.top-btn.show {
+    display: block;
+}
+
+.top-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .header {
+        padding: 30px 14px;
+        border-radius: 18px;
+    }
+
+    .game-logo {
+        font-size: 38px;
+    }
+
+    .section-header {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .section-inner {
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .section.open .section-inner {
+        padding-bottom: 18px;
+    }
+
+    .btn {
+        flex: 1;
+        text-align: center;
+    }
+
+    .top-btn {
+        width: 44px;
+        height: 44px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .close-btn {
+        width: 39px;
+        height: 39px;
+        top: 10px;
+        right: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- RIGHT TOP CLOSE BUTTON -->
+
+<button class="close-btn" onclick="goBack()" aria-label="Go back">
+    ✕
+</button>
+
+<div class="container">
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="devotional">|| राम ||</div>
+
+    <div class="game-logo">🧩</div>
+
+    <h1 class="game-title">
+        Arrow Puzzle
+    </h1>
+
+    <div class="brand-name">
+        TJ Games
+    </div>
+
+    <div class="subtitle">
+        Privacy Policy
+    </div>
+
+    <div class="date">
+        Effective Date: November 26, 2026<br>
+        Last Updated: November 26, 2026
+    </div>
+
+</header>
+
+<!-- INTRO -->
+
+<div class="notice">
+    We respect your privacy. This Privacy Policy explains
+    what information may be collected when you use
+    Arrow Puzzle : TJ games, how advertising services work,
+    how information may be used, and what choices you have.
+    Please read the sections below for details.
+</div>
+
+<!-- BUTTONS -->
+
+<div class="actions">
+
+    <button class="btn" onclick="openAll()">
+        Expand All Sections
+    </button>
+
+    <button class="btn" onclick="closeAll()">
+        Collapse All Sections
+    </button>
+
+</div>
+
+<!-- 1 -->
+
+<div class="section open">
+
+<button class="section-header" onclick="toggleSection(this)">
+    1. About the Application
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Arrow Puzzle : TJ games is a casual puzzle game where users
+solve arrow-based puzzles, progress through levels,
+participate in daily challenges, and customize gameplay
+using available themes and skins.
+</p>
+
+<p>
+The game does not require users to create an account or
+provide their name, phone number, or address to play its
+basic features.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 2 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    2. Information That May Be Collected
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+We do not directly ask users to provide personal information
+to use the basic features of the game.
+</p>
+
+<p>
+However, the application and third-party services integrated
+into it may automatically collect certain information,
+depending on the services used and your device settings.
+</p>
+
+<ul>
+<li>Device model and technical device information.</li>
+<li>Operating system and application version.</li>
+<li>Advertising ID or other advertising identifiers.</li>
+<li>IP address.</li>
+<li>Approximate location inferred from IP address.</li>
+<li>Advertising impressions, clicks and interactions.</li>
+<li>Diagnostics, crash reports and performance data.</li>
+<li>Information used for security and fraud prevention.</li>
+</ul>
+
+<p>
+We do not directly collect your precise GPS location
+through the gameplay features.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 3 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    3. Google AdMob Advertisements
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Arrow Puzzle : TJ games uses Google AdMob to display
+advertisements and support the development and maintenance
+of the game.
+</p>
+
+<h3>Banner Advertisements</h3>
+
+<p>
+Banner ads may appear in a designated area near the bottom
+of the game screen.
+</p>
+
+<h3>Interstitial Advertisements</h3>
+
+<p>
+Interstitial ads are full-screen advertisements that may
+be displayed at selected gameplay intervals, such as after
+completing certain levels.
+</p>
+
+<h3>Rewarded Advertisements</h3>
+
+<p>
+Rewarded ads are optional advertisements that users may
+choose to watch in exchange for an in-game reward or
+gameplay benefit.
+</p>
+
+<p>
+You are not required to watch a rewarded advertisement
+unless you choose to use the optional reward feature.
+</p>
+
+<h3>Information AdMob May Process</h3>
+
+<p>
+Google AdMob may collect or process information including:
+</p>
+
+<ul>
+<li>Advertising identifiers.</li>
+<li>IP address.</li>
+<li>Device and app information.</li>
+<li>Ad impressions and interaction information.</li>
+<li>Approximate location information.</li>
+<li>Fraud prevention and advertising measurement information.</li>
+</ul>
+
+<p>
+Google may use this information to provide advertisements,
+measure ad performance, prevent fraud, and personalize
+advertisements where permitted.
+</p>
+
+<p>
+The type of advertisements displayed may depend on your
+location, consent status, device settings, applicable laws,
+and Google's advertising policies.
+</p>
+
+<h3>Google Privacy Policy</h3>
+
+<p>
+<a href="https://policies.google.com/privacy"
+target="_blank" rel="noopener noreferrer">
+https://policies.google.com/privacy
+</a>
+</p>
+
+<h3>Google AdMob</h3>
+
+<p>
+<a href="https://admob.google.com/"
+target="_blank" rel="noopener noreferrer">
+https://admob.google.com/
+</a>
+</p>
+
+<h3>AdMob Help</h3>
+
+<p>
+<a href="https://support.google.com/admob/"
+target="_blank" rel="noopener noreferrer">
+https://support.google.com/admob/
+</a>
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 4 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    4. How Information May Be Used
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Information processed by the application or third-party
+services may be used for the following purposes:
+</p>
+
+<ul>
+<li>Providing and maintaining the game.</li>
+<li>Saving gameplay preferences and progress.</li>
+<li>Displaying advertisements.</li>
+<li>Personalizing advertisements where permitted.</li>
+<li>Measuring advertising performance.</li>
+<li>Preventing fraudulent activity and abuse.</li>
+<li>Detecting technical problems.</li>
+<li>Improving application stability and performance.</li>
+<li>Complying with legal requirements.</li>
+</ul>
+
+<p>
+We do not sell your personal information.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 5 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    5. Game Data and Local Storage
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+The game may store certain gameplay-related information
+locally on your device, including:
+</p>
+
+<ul>
+<li>Level progress.</li>
+<li>Completed levels.</li>
+<li>Daily Challenge progress.</li>
+<li>Selected themes and skins.</li>
+<li>Game settings.</li>
+<li>Sound preferences.</li>
+<li>Other gameplay preferences.</li>
+</ul>
+
+<p>
+This information is used to maintain your game experience.
+We do not operate a personal account system requiring
+registration or login for the basic game.
+</p>
+
+<p>
+Local game data may be deleted by clearing the application's
+storage through your device settings or uninstalling the game.
+</p>
+
+<p>
+Please note that uninstalling the application or clearing
+its data may permanently remove locally stored game progress.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 6 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    6. Third-Party Services
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Our application may use third-party services that process
+information according to their own privacy policies.
+</p>
+
+<h3>Google AdMob</h3>
+
+<p>Purpose:</p>
+
+<ul>
+<li>Banner advertisements.</li>
+<li>Interstitial advertisements.</li>
+<li>Rewarded advertisements.</li>
+<li>Advertising measurement.</li>
+<li>Fraud prevention.</li>
+<li>Personalized advertising where permitted.</li>
+</ul>
+
+<p>
+Google Privacy Policy:
+</p>
+
+<p>
+<a href="https://policies.google.com/privacy"
+target="_blank" rel="noopener noreferrer">
+Read Google's Privacy Policy
+</a>
+</p>
+
+<p>
+We do not control the privacy practices of third-party
+service providers. We encourage users to review their
+respective privacy policies.
+</p>
+
+<p>
+Third-party services or SDKs may change as the application
+is updated.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 7 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    7. Advertising Choices and Privacy Settings
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Depending on your device, region, and applicable privacy
+regulations, you may have options to manage advertising
+preferences.
+</p>
+
+<ul>
+<li>Reset or delete your advertising ID through device settings.</li>
+<li>Limit advertising personalization where supported.</li>
+<li>Manage Google advertising preferences.</li>
+<li>Review privacy or consent choices presented by Google
+or the application, where available.</li>
+</ul>
+
+<p>
+Google Ads Personalization Settings:
+</p>
+
+<p>
+<a href="https://myadcenter.google.com/"
+target="_blank" rel="noopener noreferrer">
+Manage Google Ad Preferences
+</a>
+</p>
+
+<p>
+Your advertising choices may affect the types of
+advertisements shown to you.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 8 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    8. Data Sharing
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+We do not sell, rent, or trade personal information
+to third parties.
+</p>
+
+<p>
+Information may be processed or shared with service providers
+when necessary for:
+</p>
+
+<ul>
+<li>Providing advertisements.</li>
+<li>Maintaining application functionality.</li>
+<li>Preventing fraud.</li>
+<li>Diagnosing technical issues.</li>
+<li>Complying with legal obligations.</li>
+</ul>
+
+<p>
+Third-party providers process information according to
+their applicable terms and privacy policies.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 9 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    9. Children's Privacy
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Arrow Puzzle : TJ games does not knowingly request or directly
+collect personal information from children through account
+registration or gameplay.
+</p>
+
+<p>
+The application and its advertising services may be subject
+to age restrictions, children's privacy laws, parental consent
+requirements, and advertising restrictions depending on
+the user's location.
+</p>
+
+<p>
+If you are a parent or guardian and believe that your child
+has provided personal information inappropriately, please
+contact us using the contact details below.
+</p>
+
+<p>
+We will take reasonable steps to address your concern.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 10 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    10. Data Retention
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Gameplay information stored locally on your device generally
+remains there until you delete the application's data or
+uninstall the game.
+</p>
+
+<p>
+Information processed by third-party advertising providers
+is retained according to their respective privacy policies,
+legal obligations, security requirements, and retention practices.
+</p>
+
+<p>
+We do not maintain a personal user account database for
+the basic game.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 11 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    11. Data Security
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+We take reasonable steps to protect the application and its
+information from unauthorized access, misuse, and security risks.
+</p>
+
+<p>
+However, no application, electronic storage system, or
+internet transmission method can be guaranteed to be
+completely secure.
+</p>
+
+<p>
+Users should keep their devices updated and use
+appropriate security measures.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 12 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    12. Your Privacy Rights
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Depending on your country or region, you may have certain
+rights regarding your personal information, including:
+</p>
+
+<ul>
+<li>Requesting information about personal data processing.</li>
+<li>Requesting access to personal information.</li>
+<li>Requesting correction or deletion where applicable.</li>
+<li>Withdrawing consent where processing is based on consent.</li>
+<li>Objecting to certain processing.</li>
+<li>Raising a privacy complaint with an appropriate authority.</li>
+</ul>
+
+<p>
+Because the game does not directly maintain user accounts
+or a personal gameplay database, some information may be
+controlled by third-party service providers such as Google.
+</p>
+
+<p>
+For privacy-related requests, please contact us using
+the email addresses provided below.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 13 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    13. International Data Processing
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+Third-party service providers may process information on
+servers located in different countries.
+</p>
+
+<p>
+Where applicable, such processing is subject to the service
+providers' privacy policies and applicable data protection laws.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 14 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    14. Changes to This Privacy Policy
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+We may update this Privacy Policy from time to time to
+reflect changes in:
+</p>
+
+<ul>
+<li>Game features.</li>
+<li>Advertising services.</li>
+<li>Data processing practices.</li>
+<li>Legal requirements.</li>
+<li>Security practices.</li>
+</ul>
+
+<p>
+Updated versions will be published at the official
+Privacy Policy URL.
+</p>
+
+<p>
+The "Last Updated" date will be revised when changes are made.
+</p>
+
+<p>
+Continued use of the application after an updated Privacy
+Policy is published constitutes use subject to the updated
+policy, to the extent permitted by applicable law.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- 15 -->
+
+<div class="section">
+
+<button class="section-header" onclick="toggleSection(this)">
+    15. Contact and Grievance
+    <span class="arrow">⌄</span>
+</button>
+
+<div class="section-content">
+<div class="section-inner">
+
+<p>
+If you have questions, concerns, privacy-related requests,
+or complaints regarding this Privacy Policy or
+Arrow Puzzle : TJ games, please contact us.
+</p>
+
+<h3>Developer</h3>
+
+<p>
+Tomar Ji Games
+</p>
+
+<h3>Developer Email</h3>
+
+<p>
+<a href="tomarji@1904@gmail.com">
+tomarji@1904@gmail.com
+</a>
+</p>
+
+<h3>Grievance Officer / Grievance Email</h3>
+
+<p>
+<a href="tomarji@1904@gmail.com">
+tomarji@1904@gmail.com
+</a>
+</p>
+
+<p>
+We will make reasonable efforts to review and respond to
+privacy-related inquiries within an appropriate timeframe.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-line"></div>
+
+    <div class="footer-game">
+        Arrow Puzzle : TJ Games
+    </div>
+
+    <div class="footer-tagline">
+        A little puzzle, a little fun ✨
+    </div>
+
+    <div class="footer-credit">
+        Made with <span class="heart">♥</span> by
+    </div>
+
+    <div class="footer-developer">
+        Tomar Ji Games
+    </div>
+
+    <div class="footer-copyright">
+        © 2026 Tomar Ji Games
+        <br>
+        All Rights Reserved
+    </div>
+</footer>
+
+</div>
+
+<!-- BACK TO TOP -->
+
+<button class="top-btn" id="topButton" onclick="scrollToTop()">
+    ↑
+</button>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function toggleSection(button) {
+    const section = button.parentElement;
+    section.classList.toggle("open");
+}
+
+function openAll() {
+    document.querySelectorAll(".section").forEach(section => {
+        section.classList.add("open");
+    });
+}
+
+function closeAll() {
+    document.querySelectorAll(".section").forEach(section => {
+        section.classList.remove("open");
+    });
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function goBack() {
+
+    // Android WebView bridge (if available)
+    if (window.AndroidBridge &&
+        typeof window.AndroidBridge.goBackToGame === "function") {
+
+        window.AndroidBridge.goBackToGame();
+        return;
+    }
+
+    // Browser history fallback
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "about:blank";
+    }
+
+}
+
+window.addEventListener("scroll", function() {
+
+    const topButton = document.getElementById("topButton");
+
+    if (window.scrollY > 350) {
+        topButton.classList.add("show");
+    } else {
+        topButton.classList.remove("show");
+    }
+
+});
+
+</script>
+
+</body>
+</html>
